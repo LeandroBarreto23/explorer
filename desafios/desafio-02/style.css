@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --color0:#3F3D56;
+  --color1:#EE24FF;
+  --color2:#828282;
+  --color3:#ECEFF2;
+  --tittle: 'Dosis', sans-serif;
+  --default: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1024px;
+  margin: 64px auto;
+  text-align: center;
+}
+
+main img {
+  margin-bottom: 32px;
+}
+
+main h1 {
+  font-family: var(--tittle);
+  color: var(--color0);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+main #content {
+  margin: auto;
+  max-width: 540px;
+  text-align: center;
+}
+main span {
+  color: var(--color1);
+  font-weight: bold;
+}
+
+main p {
+  font-family: var(--default);
+  color: var(--color2);
+  font-size: 15px;
+}
+
+main > p {
+  margin: 32px 0 64px;
+}
+
+main strong {
+  color: var(--color0);
+}
+
+footer {
+  text-align: center;
+}
+
+footer #line {
+  height: 0px;
+  margin: auto;
+  max-width: 391px;
+  border: 1px solid var(--color3);
+}
+
+footer #links {
+  margin-bottom: 40px;
+}
+
+footer #links a {
+  padding: 10px;
+  font-size: 15px;
+  margin-left: 42px;
+  font-weight: bold;
+  color: var(--color0);
+  text-decoration: none;
+  font-family: var(--default);
+}
+
+footer #links a:hover {
+  border-radius: 25px;
+  color: var(--color3);
+  background-color: var(--color1);
+  transition: background .3s;
+}
+
+footer img {
+  width: 100%;
+}
