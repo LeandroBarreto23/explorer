@@ -63,18 +63,19 @@ footer {
 footer #line {
   height: 0px;
   margin: auto;
-  max-width: 391px;
+  width: 391px;
   border: 1px solid var(--color3);
 }
 
 footer #links {
+  margin-top: 16px;
   margin-bottom: 40px;
 }
 
 footer #links a {
   padding: 10px;
   font-size: 15px;
-  margin-left: 42px;
+  margin: 21px;
   font-weight: bold;
   color: var(--color0);
   text-decoration: none;
@@ -89,5 +90,8 @@ footer #links a:hover {
 }
 
 footer img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
