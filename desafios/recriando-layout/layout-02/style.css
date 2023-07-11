@@ -1,0 +1,18 @@
+
+
+:root {
+  --color01:#2F2E41;
+  --color02:#00BFA6;
+  --color03:#C2C2C2;
+  --color04:#FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color01);
+}
