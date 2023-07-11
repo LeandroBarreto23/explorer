@@ -14,5 +14,17 @@
 }
 
 body {
+  color: var(--color04);
   background-color: var(--color01);
 }
+
+span {
+  color: var(--color02);
+}
+
+a {
+  color: var(--color04);
+  text-decoration: none;
+}
+
+  
