@@ -29,6 +29,7 @@ ul {
 }
 
 ul li a {
+  font-size: 18px;
     opacity: 0.5;
 }
 
