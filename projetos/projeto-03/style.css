@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap');
 
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-archivo: 'Archivo', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-poppins);
   background: #e5e5e5;
 }
 
@@ -33,7 +38,7 @@ header {
 }
 
 header h1 {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-archivo);
   font-size: 36px;
   font-weight: bold;
   line-height: 42px;
@@ -47,8 +52,35 @@ header p {
 }
 
 form {
+  padding: 64px;
   margin-top: 38px;
   background: #fafafc;
   border-radius: 8px;
   min-height: 300px;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-family: var(--font-archivo);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e6e6f0;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #4e4958;
 }
