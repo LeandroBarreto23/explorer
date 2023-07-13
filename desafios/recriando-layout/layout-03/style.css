@@ -78,11 +78,45 @@ legend {
 .input-wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.input-wrapper label {
+  color: #4E4958;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.input-wrapper label span {
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.input-wrapper label span:hover {
+  color: #838088;
+}
+
+.input-wrapper input {
+  padding-inline: 24px;
+  height: 56px;
+  border-radius: 8px;
+  color: var(--color0);
+  background: #FAFAFC;
+  border: 1px solid #E6E6F0;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
 }
 
 .col-2 {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 .col-3 {
   display: flex;
