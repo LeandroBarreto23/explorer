@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-body, input, button, select, textarea {
+body, input, select, textarea {
   font-family: var(--font-poppins);
 }
 
@@ -60,7 +60,7 @@ form {
   padding: 64px;
   margin-top: 38px;
   background: #fafafc;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
   min-height: 300px;
 
   display: flex;
@@ -179,4 +179,36 @@ legend {
 
 .checkbox-wrapper input:focus + label::before { /* verifica oq esta em foco */
   outline: 2px solid black;
+}
+
+footer {
+  height: 136px;
+  border-radius: 0 0 8px 8px;
+  background: #f0f0f4;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px 64px;
+  margin-bottom: 100px;
+  border-top: 1px solid #d6d6d6;
+}
+
+footer .button {
+  height: 56px;
+  border: none;
+  border-radius: 8px;
+  
+  color: #fff;
+  background: #04d361;
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  font-family: var(--font-archivo);
+}
+
+footer .button:hover {
+  cursor: pointer;
+  background: #08a04c;
 }
