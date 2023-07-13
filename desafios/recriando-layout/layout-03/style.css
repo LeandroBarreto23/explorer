@@ -54,7 +54,6 @@ header p {
 }
 
 form {
-  height: 600px;
   margin-top: 58px;
   padding: 64px;
   background: #fff;
@@ -81,3 +80,11 @@ legend {
   flex-direction: column;
 }
 
+.col-2 {
+  display: flex;
+  gap: 20px;
+}
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
