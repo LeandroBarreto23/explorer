@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário intermediário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Mentoria</h1>
+      <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+    </header>
+    <form>
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Informações pessoais</legend>
+          <div class="input-wrapper">
+            <div class="col-2">
+              <label for="mentory-name">Nome</label>
+              <input type="text" id="mentory-name">
+              <label for="mentory-surname">Sobrenome</label>
+              <input type="text" id="mentory-surname">
+            </div>
+            <label for="mentory-mail">E-mail <span>(Digite um e-mail válido)</span></label>
+            <input type="email" id="mentory-mail">
+            <label for="mentory-password">Senha (Mínimo 6 caracteres)</label>
+            <input type="password" id="mentory-password">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Informações do mentor</legend>
+          <div class="input-wrapper">
+            <label for="mentory-mentor">Nome do seu mentor <span>(Só o primeiro nome)</span></label>
+            <input type="text" id="mentory-mentor">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Seus horários disponíveis</legend>
+          <div class="input-wrapper">
+            <h2>Primeira mentoria</h2>
+            <div class="col-3">
+              <label for="mentory-date">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="mentory-date">
+              <label for="mentory-time">Das</label>
+              <input type="time" id="mentory-time">
+              <label for="mentory-time">Até</label>
+              <input type="time" id="mentory-time">
+            </div>
+            <h2>Segunda mentoria</h2>
+            <div class="col-3">
+              <label for="mentory-date">Data <span>(DD/MM/AAAA)</span></label>
+              <input type="date" id="mentory-date">
+              <label for="mentory-time">Das</label>
+              <input type="time" id="mentory-time">
+              <label for="mentory-time">Até</label>
+              <input type="time" id="mentory-time">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <footer>
+      <button>Salvar</button>
+    </footer>
+  </div>
+</body>
+</html>
