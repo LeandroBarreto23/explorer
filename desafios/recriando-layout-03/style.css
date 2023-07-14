@@ -64,6 +64,14 @@ fieldset {
   border: none;
 }
 
+fieldset h2 {
+  color: #535971;
+  font-size: 20px;
+  line-height: 34px;
+  font-weight: normal;
+  font-family: var(--font-Staatliches);
+}
+
 legend {
   padding-bottom: 16px;
   border-bottom: 1px solid var(--color3);
@@ -118,9 +126,14 @@ legend {
   display: flex;
   gap: 22px;
 }
+
 .col-3 {
   display: flex;
   gap: 20px;
+}
+
+.col-3 > div:nth-child(1) input {
+  width: 300px;
 }
 
 footer {
@@ -155,4 +168,8 @@ footer {
 
 .button:hover {
   background: rgb(206, 66, 94);
+}
+
+input:invalid {
+  border: 1px solid #ff1010;
 }
