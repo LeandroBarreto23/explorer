@@ -90,8 +90,5 @@ footer #links a:hover {
 }
 
 footer img {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
 }
