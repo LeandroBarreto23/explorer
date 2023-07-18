@@ -35,6 +35,7 @@ body {
 main {
   display: grid;
   gap: 3.2rem;
+  animation: downtop 700ms 350ms reverse backwards;
 }
 
 img {
@@ -45,6 +46,11 @@ header {
   margin: 10rem 0 8rem;
   text-align: center;
   font-family: var(--ff-heading);
+  animation: topdown 700ms;
+}
+
+header:hover {
+  animation-play-state: running;
 }
 
 header p {
@@ -63,6 +69,7 @@ header h1 {
 
 .card {
   position: relative;
+  transition: all 200ms;
 }
 
 .card img {
@@ -70,6 +77,15 @@ header h1 {
   object-fit: cover;
   font-family: var(--ff-heading);
   border-radius: 6px;
+  transition: all 200ms;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img:hover {
+  opacity: 0.4;
 }
 
 .card h2 {
@@ -99,4 +115,34 @@ header h1 {
 
   color: var(--fc-secundary-dark);
   background-color: var(--fc-primary);
+}
+
+/* media screen */
+@media (min-width: 700px) {
+  .page {
+    padding-inline: 10rem;
+    max-width: 117rem;
+  }
+}
+
+
+/* animations */
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  100%{
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
 }
