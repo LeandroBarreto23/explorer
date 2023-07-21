@@ -2,8 +2,9 @@
 
 :root {
   font-size: 62.5%;
+  --fs-heading: clamp(4rem, 1rem + 5vw, 5.6rem);
+  --fs-heading-sm: clamp(3rem, 0.5rem + 3vw, 4rem);
   
-  --fs-headeing:4rem;
   --ff-heading:'Epilogue', sans-serif;
   --ff-texting: 'open-sans', sans-serif;
 
@@ -29,7 +30,8 @@ body {
 
 .page {
   margin: 0 auto;
-  max-width: 33rem;
+  padding: 0 5rem;
+  max-width: clamp(33rem, 30rem + 70vw, 117rem);
 }
 
 main {
@@ -56,14 +58,14 @@ header:hover {
 header p {
   color: var(--fc-secundary);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 3px;  
   margin-bottom: 1.7rem;
   line-height: 3.2rem;
 }
 
 header h1 {
   font-weight: 800;
-  font-size: var(--fs-headeing);
+  font-size: var(--fs-heading);
   line-height: 4.8rem;
 }
 
@@ -75,8 +77,10 @@ header h1 {
 .card img {
   height: 41.6rem;
   object-fit: cover;
-  font-family: var(--ff-heading);
+  filter: brightness(0.5);
   border-radius: 6px;
+  font-family: var(--ff-heading);
+
   transition: all 200ms;
 }
 
@@ -93,7 +97,7 @@ header h1 {
   bottom: 5.2rem;
   left: 2.8rem;
 
-  font-size: var(--fs-headeing);
+  font-size: var(--fs-heading-sm);
   font-weight: 800;
 
   display: flex;
@@ -117,14 +121,46 @@ header h1 {
   background-color: var(--fc-primary);
 }
 
+main {
+  margin-bottom: 10rem;
+}
+
 /* media screen */
 @media (min-width: 700px) {
-  .page {
-    padding-inline: 10rem;
+  :root {
+    --fs-heading:5.6rem;
+  }
+
+  /* .page {
     max-width: 117rem;
+    padding-inline: 5rem;
+  } */
+
+  main {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
+@media (min-width: 930px) {
+  main {
+    grid-template-areas: 
+    "A B B"
+    "C C D";
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+  main div:nth-child(2) {
+    grid-area: B;
+  }
+  main div:nth-child(3) {
+    grid-area: C;
+  }
+  main div:nth-child(4) {
+    grid-area: D;
+  }
+}
 
 /* animations */
 @keyframes topdown {
