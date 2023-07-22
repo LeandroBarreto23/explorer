@@ -134,3 +134,48 @@ button:hover {
   color: #fff;
   background-color: var(--fc-blue-dark);
 }
+
+/* media queries */
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: space-around;
+  }
+
+  .input-wrapper input {
+    width: 50rem;
+  }
+
+  .hero img {
+    border-radius: .5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0;
+  }
+
+  .page {
+    grid-template-areas:
+    "a a a"
+    "b b c"
+    "d d d";
+    row-gap: 4rem;
+    column-gap: 3.6rem;
+  }
+
+  header {
+    grid-area: a;
+  }
+  main {
+    grid-area: b;
+    margin-left: 11rem;
+  }
+  aside {
+    grid-area: c;
+    margin-right: 11rem;
+  }
+  footer {
+    grid-area: d;
+  }
+}
