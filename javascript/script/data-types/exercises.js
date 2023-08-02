@@ -5,7 +5,7 @@ let weight
 console.log(typeof weight)
 
 // 3
-let name = "leandro"
+let Name = "leandro"
 let age = 23
 let stars = 4.8
 let isSubscribed = true
@@ -16,7 +16,7 @@ console.log(typeof student)
 
 // 4.1
 student = {
-  name: "leandro",
+  Name: "leandro",
   age: 23,
   weight: 79.5,
   isSubscribed: true,
@@ -25,7 +25,7 @@ student = {
 console.log(student)
 
 // 4.2
-console.log(`${name} tem ${age} anos e pesa ${weight} kgs.`)
+console.log(`${Name} tem ${age} anos e pesa ${weight} kgs.`)
 
 // 5
 let students = []
@@ -40,7 +40,7 @@ console.log(students[0])
 
 // 8
 const student2 = {
-  name: "john",
+  Name: "john",
   age: 23,
   weight: 79.5,
   isSubscribed: true,
