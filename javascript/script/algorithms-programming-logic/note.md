@@ -1,4 +1,4 @@
-Como resolver problemas na linguagem de programação?
+# Como resolver problemas na linguagem de programação?
 Como melhorar minha lógica de programação?
 
 1. Identifique o que já sabe e faça!
@@ -18,10 +18,16 @@ O que estou aprendendo de ferramentas do JS
   [] String() é uma função construtora para converter um dado para string
 [] Ordem de precedência dos operadores
 
-Boas práticas na escrita de variáveis:
+# Boas práticas na escrita de variáveis:
 - Em inglês
 - Sem espaços ou acentuações especiais no nome
 - Não pode iniciar com número 
 - camelCase
 - ponto e virgula servem para finalizar uma expressao de código e é facultativo
 
+# Melhorar a lógica de programação
+
+- Perguntas corretas
+- Entender o problema
+
+[] operadores matemáticos
