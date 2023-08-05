@@ -16,24 +16,24 @@
 */
 
 // pegando o nome do aluno
-let Name = prompt("Qual é o seu nome: ")
+let student = prompt("Qual o nome do aluno(a)?")
 
-// pegando as 3 notas do bimestre
-let medOne = prompt("digite qual foi a sua primeira nota: ")
-let medTwo = prompt("digite qual foi a sua segunda nota: ")
-let medThree = prompt("digite qual foi a sua terceira nota: ")
+// pegando as notas
+let n1 = prompt("Qual a nota da primeira prova?")
+let n2 = prompt("Qual a nota da segunda prova?")
+let n3 = prompt("Qual a nota da terceira prova?")
 
-// transformando a string em number
-medOne = Number(medOne)
-medTwo = Number(medTwo)
-medThree = Number(medThree)
+// calculando a media
+let average = ( Number(n1) + Number(n2) + Number(n3) ) / 3
 
-// calculando a média
-const medium = (medOne + medTwo + medThree) / 3
+let result = average > 6
 
-// média positiva > 6
-if(medium >= 6) {
-  alert("Parabens " + Name + ", a sua média do bimestre foi de " + (medium.toFixed(1)) + " pontos. Você foi aprovado.")
-}else {
-  alert("Sinto muito " + Name + ", a sua média foi de " + (medium.toFixed(1)) +" pontos e está abaixo do esperado. Mas nao desista, tente novamente na prova de recuperação.")
+average = average.toFixed(1)
+
+if (result) {
+  alert("Parabens, " + student + "! Sua média foi de: " + average)
+} else if (average < 3) {
+  alert("Reprovado")
+} else {
+  alert(student + " estude para sua prova de recuperacao! Sua média foi de: " + average)
 }
