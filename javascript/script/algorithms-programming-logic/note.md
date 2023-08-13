@@ -61,3 +61,23 @@ O que estou aprendendo de ferramentas do JS
 [] Vetores (Arrays)
   - tipo de dado estruturado
 [] incremental: o valor + 1
+
+# Guessing game - Jogo da adivinhação
+[] Controlar o fluxo da aplicação
+[] Estrutura de repetição
+  - While
+[] Gerar número aleatório
+[] Tipo de dado: NaN
+  - Não é um número
+[] Tipo de erro: SyntaxError
+  - Erro de sintaxe; erro de escrita de código
+[] Math
+  - Pacote com funcionalidade matemáticas
+  Math.random() -> número aleatório entre 0 e 1
+  Math.ceil() -> arredonda pra cima
+  Math.floor() -> arredonda pra baixo
+  Math.round() -> arredonda para o mais próximo
+[] Console
+  - Pacote com funcionalidades para o console do devtools (browser)
+[] template literals ou template strings -> ``
+[] interpolação -> ${variávelAqui}
