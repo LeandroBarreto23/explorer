@@ -31,10 +31,28 @@ const patients = [
 	},
 ]
 
+// nome
 const patientNames = []
-
 for(let patient of patients) {
 	patientNames.push(patient.name)
 }
 
-alert(patientNames)
+// idade
+const patientAges = []
+for(let patient of patients) {
+	patientAges.push(patient.age)
+}
+
+// peso
+const patientWeight = []
+for(let patient of patients) {
+	patientWeight.push(patient.weight)
+}
+
+// altura
+const patientHeight = []
+for(let patient of patients) {
+	patientHeight.push(patient.height)
+}
+
+alert(`Os pacientes ${patientNames} tem ${patientAges} anos de idade, pesam ${patientWeight} KGs e tem uma altura de ${patientHeight} centímetros.`)
