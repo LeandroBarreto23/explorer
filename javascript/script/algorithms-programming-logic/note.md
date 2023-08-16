@@ -96,3 +96,6 @@ O que estou aprendendo de ferramentas do JS
 [] arrays e funções de arrays (.push)
 [] condicional if/else
 [] template literals (strings)
+[] estrutura de dados: objetos
+  [] object literal
+[] for..of
