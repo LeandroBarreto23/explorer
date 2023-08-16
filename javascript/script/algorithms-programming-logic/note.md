@@ -93,6 +93,6 @@ O que estou aprendendo de ferramentas do JS
 
 # Ferramentas da linguagem que abordaremos
 [] loop while
-[] arrays e funções de arrays
+[] arrays e funções de arrays (.push)
 [] condicional if/else
 [] template literals (strings)
