@@ -11,7 +11,7 @@ Depois de criada a lista:
 - [ ]  Supondo que a média, para esse concurso é **7**, verifique **se** cada aluno obteve sucesso ou não em entrar no concurso e mostre uma mensagem na tela.
 */
 
-let students = [
+let studentsList = [
 	{
 		name: "Leandro",
 		firstNote: 8,
@@ -34,15 +34,14 @@ let students = [
 	}
 ]
 
-function media(firstNote, secondNote){
-	return ((firstNote + secondNote) / 2)
+function calcMedia(firstNote, secondNote){
+	let media = (firstNote + secondNote) / 2
+	return media
 }
 
-function printMediaStudent(student){
-	return `A média do(a) aluno(a) ${student.name} é: ${media(student.firstNote, student.secondNote)}`
-}
+for (let student of studentsList) {
+	let individualMedia = calcMedia(student.firstNote, student.secondNote)
+	let approvedOrNot  = individualMedia < 7 ? ' Infelizmente você nao passou, tente novamente.' : ' Parabens! você passou.'
 
-for (let student of students) {
-	let mediaMessage = printMediaStudent(student)
-	alert(mediaMessage)
+alert(`A média do(a) ${student.name} é ${individualMedia}.${approvedOrNot} `)
 }
