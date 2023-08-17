@@ -29,14 +29,18 @@ p {
 	font-weight: 600;
 }
 
+.container {
+	margin: 0 auto;
+	padding-inline: 3.2rem;
+}
 /* hero */
-.hero {
+.hero .container {
 	display: flex;
 	align-items: center;
 	text-align: center;
 	flex-direction: column;
 	gap: 3.6rem;
-	height: 100vh;
+	margin-bottom: 9rem;
 }
 
 .hero-tittle h1 {
@@ -51,3 +55,26 @@ p {
 }
 
 /* planets */
+#planets {
+	padding: 5rem 4rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 5rem;
+	justify-content: center;
+	background: linear-gradient(134deg, var(--primary-gradient) 0%, var(--second-gradient) 100%);
+}
+
+.planets-card {
+	padding: 2.6rem;
+	border-radius: 2rem;
+	background: var(--main-color);
+}
+
+.planets-card h2 {
+	font-size: 3rem;
+	font-weight: 900;
+	margin-block: 1.8rem;
+	color: var(--primary-color);
+}
+
+/* forms */
