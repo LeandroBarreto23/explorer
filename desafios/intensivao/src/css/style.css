@@ -31,6 +31,7 @@ p {
 
 .container {
 	margin: 0 auto;
+	max-width: 120rem;
 	padding-inline: 3.2rem;
 }
 /* hero */
@@ -56,12 +57,15 @@ p {
 
 /* planets */
 #planets {
+	background: linear-gradient(134deg, var(--primary-gradient) 0%, var(--second-gradient) 100%);
+}
+
+#planets .container {
 	padding: 5rem 4rem;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	gap: 5rem;
 	justify-content: center;
-	background: linear-gradient(134deg, var(--primary-gradient) 0%, var(--second-gradient) 100%);
 }
 
 .planets-card {
@@ -78,3 +82,26 @@ p {
 }
 
 /* forms */
+.contact-us {
+	margin-top: 8rem;
+	padding-inline: 4rem;
+}
+
+label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /* position: absolute; */
+}
+
+/* footer */
+footer {
+	margin-top: 6.5rem;
+	text-align: center;
+	padding: 3.2rem 1.6rem;
+	background: linear-gradient(134deg, var(--primary-gradient) 0%, var(--second-gradient) 100%);
+}
+
+footer p { 
+	color: var(--main-color);
+}

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="src/images/planet_two.svg" type="image/x-icon">
 		<title>Explore sem limites!</title>
 		<link rel="stylesheet" href="src/css/style.css">
 	</head>
@@ -21,39 +22,43 @@
 		</section>
 		<main>
 			<section id="planets">
-				<div class="planets-card">
-					<img src="src/images/planet_one.svg" alt="ilustracao de um planeta amarelo">
-					<h2>Não pare nunca</h2>
-					<p>Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca". Estudar de forma consistente e contínua é a chave para o progresso e a conquista de seus objetivos.</p>
-				</div>
-				<div class="planets-card">
-					<img src="src/images/planet_two.svg" alt="ilustracao de um planeta azul">
-					<h2>Só volta</h2>
-					<p>Se você parou ou perdeu o ritmo em alguma atividade ou projeto, saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.</p>
-				</div>
-				<div class="planets-card">
-					<img src="src/images/planet-three.svg" alt="ilustracao de um planeta rosa">
-					<h2>Siga seu ritmo</h2>
-					<p>Avançar pouco a pouco mantém progresso constante em objetivos, evitando parar ou desistir. Mesmo pequenos passos nos aproximam do destino e motivam a continuidade. Não subestime o poder de cada ação rumo ao objetivo final.</p>
-				</div>
+				<div class="container">
+					<div class="planets-card">
+						<img src="src/images/planet_one.svg" alt="ilustracao de um planeta amarelo">
+						<h2>Não pare nunca</h2>
+						<p>Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca". Estudar de forma consistente e contínua é a chave para o progresso e a conquista de seus objetivos.</p>
+					</div>
+					<div class="planets-card">
+						<img src="src/images/planet_two.svg" alt="ilustracao de um planeta azul">
+						<h2>Só volta</h2>
+						<p>Se você parou ou perdeu o ritmo em alguma atividade ou projeto, saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.</p>
+					</div>
+					<div class="planets-card">
+						<img src="src/images/planet-three.svg" alt="ilustracao de um planeta rosa">
+						<h2>Siga seu ritmo</h2>
+						<p>Avançar pouco a pouco mantém progresso constante em objetivos, evitando parar ou desistir. Mesmo pequenos passos nos aproximam do destino e motivam a continuidade. Não subestime o poder de cada ação rumo ao objetivo final.</p>
+					</div>
+				</div class="container">
 			</section>
 			<section class="contact-us">
 				<form>
-					<div class="input-name">
-						<label for="nome">Seu nome</label>
-						<input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-						<img src="src/images/person.svg" alt="ícone de usuário">
+					<div class="container">
+						<div class="input-name">
+							<label for="nome">Seu nome</label>
+							<input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+							<img class="icon-input" src="src/images/person.svg" alt="ícone de usuário">
+						</div>
+						<div class="input-mail">
+							<label for="mail">Email</label>
+							<input type="email" id="mail" name="mail" placeholder="Email" required>
+							<img src="src/images/mail.svg" alt="ícone de email">
+						</div>
+						<div class="mensage">
+							<label for="message">Digite sua mensagem aqui...</label>
+							<textarea id="message" name="mensage" placeholder="Digite sua mensagem aqui..." required></textarea>
+						</div>
+						<input class="button" type="submit" value="Enviar Mensagem">
 					</div>
-					<div class="input-mail">
-						<label for="mail">Email</label>
-						<input type="email" id="mail" name="mail" placeholder="Email" required>
-						<img src="src/images/mail.svg" alt="ícone de email">
-					</div>
-					<div class="mensage">
-						<label for="message">Digite sua mensagem aqui...</label>
-						<textarea id="message" name="mensage" placeholder="Digite sua mensagem aqui..." required></textarea>
-					</div>
-					<input class="button" type="submit" value="Enviar Mensagem">
 				</form>
 			</section>
 		</main>
