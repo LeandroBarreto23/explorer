@@ -1,0 +1,17 @@
+:root {
+	font-size: 62.5%;
+	--main-color: #FFFFFF;
+	--primary-color: #B52184;
+	--primary-gradient: #343193;
+	--second-gradient: #302C63;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1.6rem;
+}
