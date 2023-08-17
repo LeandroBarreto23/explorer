@@ -7,7 +7,7 @@ Nesse desafio, você irá solicitar ao usuário que ele insira **dois números**
 - [ ok ]  A multiplicação dos dois números;
 - [ ok ]  A divisão dos dois números;
 - [ ok ]  O resto da divisão dos dois números;
-- [ ]  Verifique se a soma dos dois números é par ~~(ou ímpar)~~;
+- [ ok ]  Verifique se a soma dos dois números é par ~~(ou ímpar)~~;
 - [ ok ]  Verifique se os dois números inseridos são iguais ~~(ou diferentes)~~.
 
 */
@@ -28,6 +28,10 @@ alert(`A divisão é: ${sub}`)
 alert(`A multiplicação é: ${mtp}`) 
 alert(`A divisão é: ${div}`)
 alert(`E o resto é: ${res}`)
+
+let parImpar = sum % 2 == 0 ? "A soma é par" : "A soma é impar"
+
+alert(parImpar)
 
 if(numberOne == numberTwo) {
   alert("Os números inseridos são iguais.")
