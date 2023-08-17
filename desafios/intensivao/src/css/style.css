@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap');
+
 :root {
 	font-size: 62.5%;
+	font-family: 'Mulish', sans-serif;
 	--main-color: #FFFFFF;
 	--primary-color: #B52184;
+	--second-color: #312D64;
 	--primary-gradient: #343193;
 	--second-gradient: #302C63;
 }
@@ -12,6 +16,38 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: 1.6rem;
 }
+
+p {
+	color: var(--second-color);
+	font-weight: 600;
+}
+
+/* hero */
+.hero {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	gap: 3.6rem;
+	height: 100vh;
+}
+
+.hero-tittle h1 {
+	font-size: 3.2rem;
+	font-weight: 900;
+	margin-bottom: .5rem;
+	color: var(--primary-color);
+}
+
+.hero-tittle p {
+	font-size: 2rem;
+}
+
+/* planets */
