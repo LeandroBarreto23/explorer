@@ -87,11 +87,80 @@ p {
 	padding-inline: 4rem;
 }
 
-label {
+.contact-us h2 {
+	color: var(--primary-color);
+	font-weight: 900;
+	font-size: 3.2rem;
+}
+
+.input-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+:where(.input-name, .input-mail, .mensage) label {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  /* position: absolute; */
+  position: absolute;
+}
+
+:where(.input-name, .input-mail, .mensage) input::placeholder, textarea::placeholder {
+	font-size: 1.6rem;
+}
+
+:where(.input-name, .input-mail) input {
+	padding: 1.2rem 1.6rem 1.2rem 5rem;
+	border-radius: 1rem;
+	max-width: 52rem;
+	width: 100%;
+	border: 0.2rem solid var(--second-color);
+}
+
+.mensage textarea {
+	padding: 1.2rem 1.6rem;
+	max-width: 52rem;
+	width: 100%;
+	border-radius: 1rem;
+	border: 0.2rem solid var(--second-color);
+}
+
+.input-name, .input-mail {
+	position: relative;
+}
+
+.input-name img, .input-mail img {
+	position: absolute;
+	left: 2rem;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.button {
+	cursor: pointer;
+	width: 15rem;
+	border: none;
+	border-radius: 1.6rem;
+	padding: 1rem 1.6rem;
+	line-height: 2.4rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--main-color);
+	background: linear-gradient(134deg, var(--primary-gradient) 0%, var(--second-gradient) 100%);
+	transition: .3s;
+}
+
+.button:hover {
+	opacity: .9;
+}
+
+.button:active {
+	opacity: 1;
+}
+
+.star {
+	display: none;
 }
 
 /* footer */
@@ -104,4 +173,19 @@ footer {
 
 footer p { 
 	color: var(--main-color);
+}
+
+@media (min-width: 1240px) {
+	.contact-us {
+		position: relative;
+	}
+
+	.star {
+		display: block;
+		max-width: 60rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(0, 10%);
+	}
 }
