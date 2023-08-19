@@ -5,13 +5,31 @@
 alert("Hellow world");
 
 // 2. Crie um script que declare uma variável e verifique se o seu valor é um número. Se for, exiba a mensagem "É um número", caso contrário, exiba a mensagem "Não é um número".
+let isNumber = 10
 
+if (typeof isNumber == 'number') {
+  alert('É um número')
+} else {
+  alert('Não é um número')
+}
     
 // 3. Crie um script que declare uma variável e verifique se o seu valor é uma string. Se for, exiba a mensagem "É uma string", caso contrário, exiba a mensagem "Não é uma string".
+let isString = 'Hi world'
 
+if (typeof isString == 'string') {
+  alert('É uma string')
+} else {
+  alert('Não é uma string')
+}
 
 // 4. Crie um script que declare uma variável e verifique se o seu valor é um booleano. Se for, exiba a mensagem "É um booleano", caso contrário, exiba a mensagem "Não é um booleano".
+let isBoolean = true
 
+if (typeof isBoolean == 'boolean') {
+  alert('É um booleano')
+} else {
+  alert('Não é um booleano')
+}
 
 // 5. Crie um script que declare duas variáveis e exiba o resultado da soma entre elas.
 alert("Insira dois numeros para realizar a soma entre eles.")
