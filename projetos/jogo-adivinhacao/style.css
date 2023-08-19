@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap');
+
 :root {
   font-size: 62.5%;
+  --main-purple: #34355B;
   --main-white: #ffffff;
+  --input-color: #DCE2E9;
+  --button-color: #7879F1;
   --bg-gradient: linear-gradient(315deg, #C2E9FB 0%, #A1C4FD 100%);
 }
 
@@ -19,6 +24,10 @@ body {
   place-items: center;
 }
 
+body, button, input {
+  font-family: 'DM Sans', sans-serif;
+}
+
 main {
   border-radius: .6rem;
   background: var(--main-white);
@@ -27,4 +36,69 @@ main {
 
   width: min(42.8rem, 90%);
   margin-top: -12rem;
+
+  text-align: center;
+}
+
+button {
+  font-weight: bold;
+  color: var(--main-white);
+  border-radius: 0 .4rem .4rem 0;
+  background: var(--button-color);
+  cursor: pointer;
+
+  transition: opacity .3s;
+}
+
+button:hover {
+  opacity: .85;
+}
+
+.hide {
+  display: none;
+}
+
+/* screenOne */
+h1 {
+  margin-bottom: 1.6rem;
+
+  font-weight: 600;
+  font-size: 2.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, p {
+  color: var(--main-purple);
+}
+
+p {
+  opacity: .8;
+}
+
+form {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+input, button {
+  border: none;
+  padding: 1.6rem;
+}
+
+input {
+  width: 7rem;
+  border-radius: .4rem 0 0 .4rem;
+  background: var(--input-color);
+}
+
+/* screenTwo */
+h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  margin-bottom: 3.2rem;
+}
+
+.screenTwo button {
+  border-radius: .4rem;
 }
