@@ -84,7 +84,7 @@ p {
 /* forms */
 .contact-us {
 	margin-top: 8rem;
-	padding-inline: 4rem;
+	padding-inline: calc(4rem 3.2rem);
 }
 
 .contact-us h2 {
@@ -122,6 +122,8 @@ p {
 	padding: 1.2rem 1.6rem;
 	max-width: 52rem;
 	width: 100%;
+	height: 10rem;
+	resize: none;
 	border-radius: 1rem;
 	border: 0.2rem solid var(--second-color);
 }
