@@ -1,11 +1,17 @@
-// puxando os elementos do HTML para o JS
+// Variaveis
 const screenOne = document.querySelector(".screenOne")
 const screenTwo = document.querySelector(".screenTwo")
 const btnTry = document.querySelector("#btnTry")
 const btnReset = document.querySelector("#btnReset")
 
-const randomNumber = Math.round(Math.random() * 10)
+let randomNumber = Math.round(Math.random() * 10)
 let xAttempts = 1
+
+// eventos
+btnTry.addEventListener('click', handleTryClick)
+btnReset.addEventListener('click', handleResetClick)
+document.addEventListener('keydown', keyReset)
+
 
 // função callback
 function handleTryClick(event) {
@@ -14,21 +20,29 @@ function handleTryClick(event) {
   const inputNumber = document.querySelector("#inputNumber")
 
   if(Number(inputNumber.value) == randomNumber) {
-    screenOne.classList.add("hide")
-    screenTwo.classList.remove("hide")
+    toggleScreen()
 
-    document.querySelector(".screenTwo h2")
-    .innerText = `Você acertou em ${xAttempts} tentativas`
+    screenTwo.querySelector("h2").innerText = `Você acertou em ${xAttempts} tentativas`
   }
 
-  inputNumber.value = "" //para resetar o valor do input toda vez q errar o numero correto
+  //resetar o valor do input
+  inputNumber.value = "" 
   xAttempts++
 }
 
-// função callback
-btnTry.addEventListener('click', handleTryClick)
-btnReset.addEventListener('click', function() {
-  screenOne.classList.remove("hide")
-  screenTwo.classList.add("hide")
+function handleResetClick() {
+  toggleScreen()
   xAttempts = 1
-})
+  randomNumber = Math.round(Math.random() * 10)
+}
+
+function toggleScreen() {
+  screenOne.classList.toggle("hide")
+  screenTwo.classList.toggle("hide")
+}
+
+function keyReset(event) {
+  if(event.key == 'Enter' && screenOne.classList.contains('hide')) {
+    handleResetClick()
+  }
+}
