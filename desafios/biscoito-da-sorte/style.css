@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --cookie-font: 'Dancing Script', cursive;
+    --body-font: 'Montserrat', sans-serif;
+    --body-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+    --main-white: #ffffff;
+    --main-darkblue: #34355B;
+    --main-orange: #FF9500;
+    --main-lightblue: #E4EDF1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+}
+
+body, button {
+    font-family: var(--body-font);
+}
+
+/* typograph */
+h1 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* container */
+main {
+    padding: 4.8rem 6.4rem;
+    border-radius: .5rem;
+    box-shadow: var(--body-shadow);
+    background: var(--main-white);
+
+    text-align: center;
+    color: var(--main-darkblue);
+}
+
+main h1 {
+    width: 26rem;
+    margin: auto;
+}
+
+main p {
+    margin-block: 1.6rem;
+}
+
+button {
+    font-size: 1.6rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/* screenOne */
+.screenOne {
+    @keyframes cookieAnimation {
+        0% {
+            scale: 1;
+        }
+    
+        50% {
+            scale: 1.05;
+        }
+    
+        100% {
+            scale: 1;
+        }
+    }
+    
+    button:hover {
+        animation: cookieAnimation 1s infinite;
+    }
+}
+
+/* screenTwo */
+.mensagem {
+    padding: 1rem;
+    font-size: 2.4rem;
+    font-family: var(--cookie-font);
+    background: var(--main-lightblue);
+    box-shadow: .2rem .2rem .2rem 0 rgba(85, 85, 85, 0.50);
+}
+
+.screenTwo button {
+    padding: 1.6rem;
+    font-weight: 700;
+    color: var(--main-white);
+    border-radius: .4rem;
+    background: var(--main-orange);
+    transition: .3s;
+}
+
+.screenTwo button:hover {
+    opacity: .80;
+}
