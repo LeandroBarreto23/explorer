@@ -5,10 +5,6 @@ const cookieOpen = document.getElementById('cookieOpen')
 const openAnotherCookie = document.getElementById('openAnotherCookie')
 const message = document.getElementById('message')
 
-// pegando os EVENTOS de click
-cookieOpen.addEventListener('click', handleClick)
-openAnotherCookie.addEventListener('click', btnResetClick)
-
 // array de frases
 let allPhrases = [
   "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
@@ -23,18 +19,22 @@ let allPhrases = [
   "Se você sonha, você pode fazer."
 ]
 
-// selecionando uma frase aleatoria
+// funcao para selecionar uma frase aleatória
 function randomPhrase() {
   let randomNumber = Math.floor(Math.random() * allPhrases.length) //sorteei um numero do tamanho do array para agir como o indice do array
   let chosenPhrase = allPhrases[randomNumber] //atribui a frase do indice a uma variavel
   return chosenPhrase //retornei o valor da posicao do array pra fora da funcao
 }  
 
-// atribuindo o valor da fucao a uma variavel e colocando o conteudo dentro de um h2 no HTML
-let displayPhrase = randomPhrase()
-message.textContent = displayPhrase 
+// funcao para exibir a frase aleatória no HTML
+function displayRandomPhrase() {
+  let displayPhrase = randomPhrase()
+  message.textContent = displayPhrase 
+}
 
-// funcao para adicionar a CLASS HIDE para alternar entre as duas telas
+displayRandomPhrase()
+
+// funcao para alternar entre as telas
 function toggleScreen() {
   screenOne.classList.toggle('hide')
   screenTwo.classList.toggle('hide')
@@ -43,10 +43,15 @@ function toggleScreen() {
 // funcao de click ao para abrir o biscoito
 function handleClick() {
   toggleScreen()
-  randomNumber = Math.floor(Math.random() * allPhrases.length)
+  displayRandomPhrase()
 }
 
 // funcao de click para abrir outro biscoito
 function btnResetClick() {
-
+  toggleScreen()
+  displayRandomPhrase()
 }
+
+// pegando os EVENTOS de click
+cookieOpen.addEventListener('click', handleClick)
+openAnotherCookie.addEventListener('click', btnResetClick)
