@@ -108,7 +108,7 @@ button {
   animation: toFadeIn 1.5s ;
 }
 
-.screenTwo button {
+#screenTwo button {
   padding: 1.6rem;
   font-weight: 700;
   color: var(--main-white);
@@ -117,7 +117,7 @@ button {
   transition: .3s;
 }
 
-.screenTwo button:hover {
+#screenTwo button:hover {
   opacity: .80;
 }
 

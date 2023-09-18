@@ -9,16 +9,16 @@
   </head>
   <body>
     <main>
-      <div class="screenOne hide">
+      <div id="screenOne">
         <h1>Qual é a mensagem de hoje?</h1>
         <p>Abra o biscoito e descubra!</p>
-        <div id="cookieOpen"></div>
+        <div id="cookieOpen" onclick="handleClick()"></div>
       </div>
-      <div class="screenTwo">
+      <div id="screenTwo" class="hide">
         <h1>Aqui está a sua mensagem de hoje:</h1>
         <h2 class="mensagem">A mensagem irá aparecer aqui</h2>
         <img src="assets/opened-cookie.png" alt="ilustracao do biscoito aberto"><br>
-        <button  id="openOtherCookie">Abrir outro biscoito</button>
+        <button onclick="handleClick()" id="openOtherCookie">Abrir outro biscoito</button>
       </div>
     </main>
   </body>
