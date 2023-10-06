@@ -16,11 +16,6 @@
   box-sizing: border-box;
 }
 
-html.dark {
-  --bg-color: #323238;
-  --text-color: #FFFFFF;
-}
-
 body {
   font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
