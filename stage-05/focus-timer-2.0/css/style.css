@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+  /* typograph */
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  /* color */
+  --text-color: #323238;
+  --bg-color: #FFFFFF;
+  --card-color: #E1E1E6;
+  --active-color: #02799D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.dark {
+  --bg-color: #323238;
+  --text-color: #FFFFFF;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+#app {
+  text-align: center;
+  padding-inline: 2rem;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+}
+
+.timer {
+  font-size: 10rem;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.6rem;
+}
+
+.controls button {
+  font-size: 4.8rem;
+}
+
+.sounds {
+  max-width: 32rem;
+  gap: 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.sounds button {
+  font-size: 5.5rem;
+  padding: 3.5rem;
+  border-radius: 2rem;
+  border: .2rem solid transparent;
+  background-color: var(--card-color);
+  transition: .2s ease-in;
+}
+
+.sounds button:hover {
+  color: var(--active-color);
+  border: .2rem solid var(--active-color);
+}
