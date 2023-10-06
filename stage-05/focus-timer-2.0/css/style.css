@@ -82,7 +82,7 @@ button {
   border: .2rem solid var(--active-color);
 }
 
-.active {
+.sounds button.active {
   color: var(--card-color);
   background-color: var(--active-color);
   transition: all .2s ease-in;
