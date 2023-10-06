@@ -5,6 +5,8 @@ import { kitchenTimer } from './sounds.js'
 // recursão - funcao que chama ela mesma em algum momento, mas precisa ter algum momento onde ela para se nao pode haver problemas.
 // setTimeout() funcao que executa uma funcao depois de alguns milisegundos.
 export function countdown() {
+  clearTimeout(state.countdownId)
+
   if(!state.isRunning) {
     return
   }
@@ -27,7 +29,7 @@ export function countdown() {
 
   updateDisplay(minutes, seconds)
 
-  setTimeout(() => countdown(), 1000)
+  state.countdownId = setTimeout(() => countdown(), 1000)
 }
 
 export function updateDisplay(minutes, seconds) {
