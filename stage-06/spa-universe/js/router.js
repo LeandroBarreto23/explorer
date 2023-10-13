@@ -1,9 +1,11 @@
 export class Router {
 
   routes = {}
+  pageBg = {}
 
-  add(routeName, page) {
+  add(routeName, page, BgImage) {
     this.routes[routeName] = page
+    this.pageBg[routeName] = BgImage
   }
 
   route(event) {
@@ -24,6 +26,7 @@ export class Router {
     .then(data => data.text())
     .then(html => {
       document.querySelector('#app').innerHTML = html
+      document.body.style.backgroundImage = this.pageBg[pathname]
     })
   }
 }

@@ -2,6 +2,9 @@
 
 :root {
   font-size: 62.5%;
+  --text-color: #ffffff;
+  --link-inative: #C4C4CC;
+  --primary-color: #02799D;
 }
 
 * {
@@ -16,7 +19,7 @@ body, button {
 }
 
 body {
-  color: white;
+  color: var(--text-color);
   min-height: 100vh;
   background: url(../assets/universe-1.png) no-repeat center center / cover;
 }
@@ -38,6 +41,11 @@ a {
   color: currentColor;
   text-decoration: none;
   font-size: 2.4rem;
+  color: var(--link-inative);
+}
+
+.active {
+  color: var(--text-color);
 }
 
 #app {
@@ -76,17 +84,17 @@ a {
   font-size: 1.4rem;
   font-weight: 700;
 
-  color: white;
+  color: var(--text-color);
   border-radius: .5rem;
-  border: .2rem solid white;
+  border: .2rem solid var(--text-color);
   background-color: transparent;
 
   transition: .2s ease-in;
 }
 
 #home button:hover {
-  color: #02799D;
-  background-color: white;
+  color: var(--primary-color);
+  background-color: var(--text-color);
 }
 
 #universe,
