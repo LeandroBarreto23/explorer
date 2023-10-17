@@ -1,7 +1,3 @@
-// uma classe com a lógica dos dados: como os dados serao estruturados
+import { FavoritesView } from "./favorites.js";
 
-
-
-
-
-// classe que vai criar a visualizacao e eventos do html
+new FavoritesView('#app')
