@@ -85,7 +85,8 @@ button {
 .sounds button.active {
   color: var(--card-color);
   background-color: var(--active-color);
-  transition: all .2s ease-in;
+  transition: color .2s ease-in,
+              background .2s ease-in;
 }
 
 .sounds button.active:hover {
