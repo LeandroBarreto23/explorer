@@ -24,9 +24,11 @@ export class Favorites {
 
   delete(user) {
     // Higher-order Functions (map, filter, find, reduce)
-    const filteredEntries = this.entries
-    .filter(entry => entry.login !== user.login)
-    console.log(filteredEntries)
+    const filteredEntries = this.entries.filter(entry => entry.login !== user.login)
+
+    this.entries = filteredEntries
+    console.log(this.entries, filteredEntries)
+    this.update()
   }
 
 }
@@ -44,11 +46,8 @@ export class FavoritesView extends Favorites {
   update() {
     this.removeAllTr()
 
-    
-    
     this.entries.forEach(user => {
       const row = this.createRow()
-      console.log(row)
 
       row.querySelector('.user img').src = `https://github.com/${user.login}.png`
       row.querySelector('.user img').alt = `Imagem de ${user.name}`
@@ -56,8 +55,10 @@ export class FavoritesView extends Favorites {
       row.querySelector('.user span').textContent = user.login
       row.querySelector('.repositories').textContent = user.public_repos
       row.querySelector('.followers').textContent = user.followers
+
       row.querySelector('.remove').onclick = () => {
         const isOk = confirm('Tem certeza que deseja deletar essa linha?')
+
         if(isOk) {
           this.delete(user)
         }
@@ -67,36 +68,35 @@ export class FavoritesView extends Favorites {
     })
 
   }
-
+  
 
   createRow() {
     const tr = document.createElement('tr')
 
-    tr.innerHTML = `
-      <td class="user">
-        <img src="https://github.com/maykbrito.png" alt="imagem de leandro">
-        <a href="" target="_blank">
-          <p>Mayk Brito</p>
-          <span>maykbrito</span>
-        </a>
-      </td>
-      <td class="repositories">
-        76
-      </td>
-      <td class="followers">
-        9685
-      </td>
-      <td>
-        <button class="remove">&times;</button>
-      </td>
+    tr.innerHTML = tr.innerHTML = `
+    <td class="user">
+       <img src="https://github.com/maykbrito.png" alt="Imagem de maykbrito">
+       <a href="https://github.com/maykbrito" target="_blank">
+         <p>Mayk Brito</p>
+         <span>maykbrito</span>
+       </a>
+     </td>
+     <td class="repositories">
+       76
+     </td>
+     <td class="followers">
+       9589
+     </td>
+     <td>
+       <button class="remove">&times;</button>
+     </td>
     `
     return tr
   }
 
   removeAllTr() {
-    this.tbody.querySelectorAll('tr')
-      .forEach((tr) => {
+    this.tbody.querySelectorAll('tr').forEach((tr) => {
         tr.remove
-    })
+    });
   }
 }
