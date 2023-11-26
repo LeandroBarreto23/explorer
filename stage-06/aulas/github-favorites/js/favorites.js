@@ -1,8 +1,34 @@
+export class GithubUser {
+  static search(username) {
+    const endpoint = `https://api.github.com/users/${username}`
+
+    return fetch(endpoint)
+    .then(data => data.json())
+    .then(({ login, name, public_repos, followers}) => ({
+      login,
+      name,
+      public_repos,
+      followers
+    }))
+    /*
+    .then(data => ({
+      login: data.login,
+      data: data.name,
+      public_repos: data.public_repos,
+      followers: data.followers
+    }))
+    */
+  }
+}
+
 // uma classe com a lógica dos dados: como os dados serao estruturados
 export class Favorites {
   constructor(root) {
-      this.root = document.querySelector(root)
-      this.load()
+    this.root = document.querySelector(root)
+    this.load()
+
+    GithubUser.search('diego3g')
+    .then(user => console.log(user))
   }
 
   load() {
