@@ -26,10 +26,6 @@ body * {
   font-family: var(--ff-primary);
 }
 
-button {
-  background-color: var(--primary-color);
-}
-
 .sr-only {
   position: absolute;
   width: .1rem;
@@ -49,7 +45,106 @@ button {
 }
 
 header {
+  margin: 2.5rem 0 ;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  & h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  & input {
+    height: 3.2rem;
+    border: .1rem solid #ccc;
+    border-radius: .4rem 0 0 .4rem;
+  }
+
+  & button {
+    padding: 0 1rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 0 .4rem .4rem 0;
+    background-color: var(--primary-color);
+
+    cursor: pointer;
+    transition: filter .3s ease-out;
+  }
+
+  & button:hover {
+    filter: brightness(1.1);
+  }
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* remove o espaço em branco entre as colunas */
+  box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+
+  & tr:nth-child(even) { /* estiliza as linhas pares */
+    background-color: #eee;
+  }
+
+  & tr:nth-child(odd) { /* estiliza as linhas impares */
+    background-color: #ddd;
+  }
+
+  & th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: normal;
+    background-color: var(--primary-color);
+  }
+
+  & th:first-child {
+    border-top-left-radius: .4rem;
+  }
+
+  & th:last-child {
+    border-top-right-radius: .4rem;
+  }
+
+  & td {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  & td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; /* cobre todo espaço sem distorcer a imagem */
+    border-radius: 50%;
+  }
+
+  & td.user a {
+    text-decoration: none;
+  }
+
+  & td.user a p {
+    font-weight: bold;
+  }
+
+  & td .remove {
+    cursor: pointer;
+    color: red;
+    border: none;
+    background: none;
+  }
 }
