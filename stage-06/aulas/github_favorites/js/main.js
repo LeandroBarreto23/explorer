@@ -1,3 +1,3 @@
-import { FavortesView } from "./Favorites.js";
+import { FavoritesView } from "./Favorites.js";
 
-new FavortesView("#app")
+new FavoritesView("#app")

@@ -24,14 +24,18 @@ export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
     this.load()
-
-    GithubUser.search('leosousa23').then(user => console.log(user))
   }
 
   // crio um array de objetos com os dados de cada usuario
   load() {
     // no local storage é salvo todo tipo de dado em formato de string, por isso usamos o JSON.parse() para transformar a string em um objeto
     this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
+  }
+
+  // async define que a função será assincrona
+  async add(username) {
+    // await vai esperar a promeça retornar o dado para continuar suas funcionalidades
+    const user = await GithubUser.search(username)
   }
 
   delete(user) {
@@ -46,7 +50,7 @@ export class Favorites {
 }
 
 // classe que vai criar a visualizacao e eventos do HTML
-export class FavortesView extends Favorites {
+export class FavoritesView extends Favorites {
   //root aqui é passado no main como sendo o #app do html
   constructor(root) {
     super(root)
@@ -55,6 +59,17 @@ export class FavortesView extends Favorites {
   this.tbody = this.root.querySelector('table tbody')
 
     this.update()
+    this.onAdd()
+  }
+
+  onAdd() {
+    const addButton = this.root.querySelector('.search button')
+    addButton.onclick = () => {
+      // desestruturacao de dado pegando o valor do input (value = input.value)
+      const { value } = this.root.querySelector('.search input')
+
+      this.add(value)
+    }
   }
 
   update() {
