@@ -8,28 +8,18 @@ export class Favorites {
 
   // crio um array de objetos com os dados de cada usuario
   load() {
-    this.entries = [
-      {
-      login: 'maykbrito',
-      name: 'Mayk Brito',
-      public_repos: '76',
-      followers: '120000'
-      },
-      {
-      login: 'diego3g',
-      name: 'Diego Fernandes',
-      public_repos: '76',
-      followers: '120000'
-      }
-    ]
+    // no local storage é salvo todo tipo de dado em formato de string, por isso usamos o JSON.parse() para transformar a string em um objeto
+    this.entries = JSON.parse(localStorage.getItem('@github-favorites:')) || []
   }
 
   delete(user) {
     //higher order functions (map, filter, find, reduce)
     const filteredEntries = this.entries
     .filter(entry => entry.login !== user.login)
-    
-    console.log(filteredEntries)
+
+    // principio da imutabilidade - reatribuir o resultado da funcao ao array original (apago todo o original e coloco um novo array)
+    this.entries = filteredEntries
+    this.update()
   }
 }
 
