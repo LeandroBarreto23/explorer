@@ -61,6 +61,7 @@ header {
   align-items: center;
 
   & input {
+    padding: 1.2rem;
     height: 3.2rem;
     border: .1rem solid #ccc;
     border-radius: .4rem 0 0 .4rem;
