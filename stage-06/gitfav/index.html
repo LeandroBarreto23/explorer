@@ -10,34 +10,52 @@
 <body>
   <header>
     <img src="src/images/logo.svg" alt="logo do gitfav">
-    <div>
+    <div class="add-favorites">
       <label for="input-username" class="sr-only">Digite o username que quer favoritar</label>
       <input id="input-username" type="text" placeholder="Digite o username que quer favoritar">
+      <button id="favorite">
+        <img src="src/images/star.svg" alt="estrela de favoritos">
+        Favoritar
+      </button>
     </div>
-    <button id="favorite">
-      <img src="src/images/star.svg" alt="estrela de favoritos">
-      Favoritar
-    </button>
   </header>
   <table>
     <thead>
       <tr>
-        <td>Usuário</td>
-        <td>Repositories</td>
-        <td>Followers</td>
-        <td>Ação</td>
+        <th>Usuário</th>
+        <th>Repositories</th>
+        <th>Followers</th>
+        <th>Ação</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td class="user">
           <img src="https://github.com/diego3g.png" alt="imagem de diego3g">
-          <a href=""></a>
-          <p></p>
+          <a href="https://github.com/diego3g" target="_blank">
+            <p>Diego Fernandes</p>
+            <span>/diego3g</span>
+          </a>
         </td>
         <td class="public_repo">123</td>
         <td class="followers">1234</td>
-        <td class="remove">Remover</td>
+        <td>
+          <button class="remove">Remover</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="user">
+          <img src="https://github.com/maykbrito.png" alt="imagem de diego3g">
+          <a href="https://github.com/maykbrito" target="_blank">
+            <p>Mayk Brito</p>
+            <span>/maykbrito</span>
+          </a>
+        </td>
+        <td class="public_repo">123</td>
+        <td class="followers">1234</td>
+        <td>
+          <button class="remove">Remover</button>
+        </td>
       </tr>
     </tbody>
   </table>
