@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitFav</title>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img src="images/Gitfav.svg" alt="logo GitFav">
+      <div id="add-user">
+        <label for="input-user"></label>
+        <input id="input-user" type="text" placeholder="Digite o Github Username que deseja favoritar">
+        <button id="btn-add">
+          <i class="ph ph-star"></i>
+          Favoritar
+        </button>
+      </div>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Repositórios</th>
+          <th>Seguidores</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="user">
+            <img src="https://github.com/maykbrito.png" alt="Imagem de maykbrito">
+            <p>Mayk Brito</p>
+            <span>/maykbrito</span>
+          </td>
+          <td class="public_repos">123</td>
+          <td class="followers">1234</td>
+          <td class="action">
+            <button class="btn-remove">
+              Remover
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
