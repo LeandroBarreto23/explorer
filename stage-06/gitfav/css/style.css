@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  font-size: 62.5%;
+  --bg-color: #141414;
+  --input-bg-color: #06181C;
+  --btn-fav-color: #065E7C;
+  --btn-fav-text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  gap: 29rem;
+}
+
+#form-controls {
+  display: flex;
+  gap: .8rem;
+
+  & input {
+    width: 46rem;
+    padding: 1.6rem;
+    border: none;
+    border-radius: .5rem;
+    outline-color: var(--btn-fav-color);
+    background: var(--input-bg-color);
+  }
+
+  & button {
+    cursor: pointer;
+    padding: 1.2rem 3.2rem;
+  
+    line-height: 2.4rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+  
+    border: none;
+    border-radius: .5rem;
+    color: var(--btn-fav-text-color);
+    background-color: var(--btn-fav-color);
+    transition: all .3s ease;
+
+    & i { 
+      font-size: 2.4rem;
+    }
+  }
+
+  & button:hover {
+    color: var(--btn-fav-color);
+    background-color: var(--btn-fav-text-color);
+  }
+
+}
+
